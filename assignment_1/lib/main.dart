@@ -25,18 +25,6 @@ class _MyAppState extends State<MyApp> {
       counter-=50;
     });
    }
-  void isSold(){
-    setState(() {
-       msg="Item Sold for ";
-    });
-  }
-  void reset(){
-    setState(() {
-      counter=0;
-      msg="Current Bid is: ";
-    });
-  }
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -46,7 +34,7 @@ class _MyAppState extends State<MyApp> {
             backgroundColor: Colors.lightBlue,
             appBar: AppBar(
               centerTitle: true,
-              title: Text('Assignment-1', style: TextStyle(fontSize: 28,
+              title: Text('Assignment-1 @44722', style: TextStyle(fontSize: 28,
                   fontWeight: FontWeight.bold,
                   color: Colors.white
               ),),
@@ -104,29 +92,6 @@ class _MyAppState extends State<MyApp> {
                         child: Icon(Icons.remove),
                       )
                       ),
-                  Positioned(
-                      bottom: 16,
-                      left: 280,
-                      width: 100,
-                      height: 50,
-                      child:FloatingActionButton.extended(
-                        label: Text('buy'),
-                        backgroundColor: Colors.yellow,
-                        icon: Icon(Icons.add_box),
-                          onPressed:isSold,
-                        tooltip: 'Buy',
-                      ),
-                  ),
-                  Positioned(
-                    top: 16,
-                      right: 16,
-                      child:FloatingActionButton(
-                          onPressed:reset,
-                        backgroundColor: Colors.yellow,
-                        tooltip: 'reset',
-                        child: Icon(Icons.close)
-                      )
-                  )
                     ],
               ),
             )
